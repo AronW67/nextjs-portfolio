@@ -1,0 +1,116 @@
+.projectDetailContainer {
+    display: grid;
+    grid-template-columns: 1.5fr 3.5fr;
+}
+
+.projectDetailContainer .projectDetailContent {
+    padding: 2rem;
+    background: #f8f8f8;
+}
+
+.projectDetailContainer .projectDetailContent h1 {
+    margin-bottom: 1rem;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer {
+    margin-bottom: 2rem;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span {
+    font-size: .8rem;
+    margin: 1rem .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0 rgb(0 0 0 / 20%);
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:first-of-type {
+    margin-left: 0;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:global(#personal) {
+    background: #64F4AC;
+    color: #242424;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:global(#professional) {
+    background: #253237;
+    color: #ffffff;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:global(#frontend) {
+    background: #95B8D1;
+    color: #242424;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:global(#backend) {
+    background: #ffffff;
+    color: #242424;
+}
+
+.projectDetailContainer .projectDetailContent .projectTagContainer span:global(#uxui) {
+    background: #EAC4D5;
+    color: #242424;
+}
+
+.projectDetailContainer .projectDetailContent p {
+    margin-bottom: 2rem;
+}
+
+.projectDetailContainer .projectDetailContent .btn {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.projectDetailContainer .projectDetailImage img {
+    width: 100%;
+}
+
+.projectDetailContainer .projectDetailImage .swiper {
+    display: inherit;
+}
+
+.projectDetailContainer .projectDetailImage .swiper .swiperSlide {
+    display: inherit;
+    width: auto !important;
+    max-width: 100% !important;
+}
+
+.projectDetailImage.small {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .projectDetailContainer {
+        grid-template-columns: 1fr;
+    }
+
+    .projectDetailContainer .projectDetailContent {
+        padding: 1rem 0;
+    }
+
+    .projectDetailContainer .projectDetailContent h1 {
+        margin: 1rem;
+    } 
+
+    .projectDetailContainer .projectDetailContent .projectTagContainer {
+        margin: auto 1rem 2rem;
+    }
+    
+    .projectDetailContainer .projectDetailContent p {
+        margin: 1rem;
+    } 
+    
+    .projectDetailContainer .projectButtonContainer {
+        margin: auto 1rem;
+    }
+
+    .projectDetailImage.large {
+        display: none;
+    }
+
+    .projectDetailImage.small {
+        margin-bottom: 1rem;
+        display: block;
+    }
+}

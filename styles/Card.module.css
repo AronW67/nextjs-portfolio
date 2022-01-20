@@ -1,0 +1,125 @@
+.card {
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    height: 350px;
+  }
+  
+  .card.headerCard {
+    height: auto;
+  }
+  
+  .card:first-of-type {
+    min-height: auto;
+  }
+  
+  .card .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffffb5;
+    opacity: 0;
+    transition: 1s;
+    z-index: 2;
+  }
+  
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .card .overlay .cardInfo { 
+    position: relative;
+    top: 65%;
+    color: #242424;
+    font-size: 22px;
+    z-index: 2;
+    text-align: center;
+  }
+  
+  .card .overlay .cardInfo h3 {
+    margin-bottom: 1rem;
+  }
+  
+  .card .overlay .cardInfo .tag {
+    font-size: .8rem;
+    margin: 1rem .5rem;
+    padding: .5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 4px 0 rgb(0 0 0 / 20%);
+  }
+  
+  .card .overlay .cardInfo .tag:global(#personal) {
+    background: #64F4AC;
+    color: #242424;
+  }
+  
+  .card .overlay .cardInfo .tag:global(#professional) {
+    background: #253237;
+    color: #ffffff;
+  }
+  
+  .card .overlay .cardInfo .tag:global(#frontend) {
+    background: #95B8D1;
+    color: #242424;
+  }
+  
+  .card .overlay .cardInfo .tag:global(#backend) {
+    background: #ffffff;
+    color: #242424;
+  }
+  
+  .card .overlay .cardInfo .tag:global(#uxui) {
+    background: #EAC4D5;
+    color: #242424;
+  }
+  
+  .cardWrapper .lazyloadWrapper {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .card {
+        margin-bottom: 1rem;
+        height: 350px;
+    }
+  
+    .card .overlay {
+        opacity: 1;
+        background: none;
+        height: auto;
+        bottom: 2.5rem;
+        top: auto;
+        left: auto;
+    }
+  
+    .card .overlay .cardInfo {
+        text-align: left;
+        color: white;
+        top: auto;
+    }
+  
+    .card .overlay .cardInfo h3 {
+        margin: 0 0 .5rem 1rem;
+        font-size: 1.5rem;
+    }
+  
+    .card .overlay .cardInfo span:first-of-type {
+        margin-left: 1rem;
+    }
+  
+    .card .overlay .cardInfo span {
+        font-size: .6rem;
+    }
+  }

@@ -1,0 +1,87 @@
+.contactForm {
+    background: #f8f8f8;
+    padding: 2rem;
+}
+
+.contactForm h1 {
+    margin-bottom: 1rem;
+    text-align: center
+}
+
+.contactForm p {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.contactForm form {
+    width: 500px;
+    margin: 0px auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 3px 0 #ddd;
+}
+
+.contactForm form input, .contactForm form textarea {
+    display: block;
+    width: 100%;
+    padding: .5rem .8rem .5rem .8rem;
+    margin: 2rem 0 ;
+    border:1px solid #242424;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contactForm form textarea {
+    resize: none;
+    min-height: 300px;
+}
+
+.contactForm form input:first-of-type {
+    margin-top: 0;
+}
+
+.contactForm form .contactSubmitBtn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    color: #242424;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+    background: white;
+    font-size: 20px;
+}
+
+.contactForm form .contactSubmitBtn:hover {
+    transition: all 0.3s ease-out;
+    background: #242424;
+    color: #fff;
+    transition: 250ms;
+}
+
+.contactForm form .errorMessage {
+    margin: 1rem 0;
+    color: red;
+    text-align: left;
+}
+
+.contactForm .successMessage {
+    color: #15c39a;
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+    .contactForm {
+        padding: 2rem 0;
+    }
+
+    .contactForm form {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
