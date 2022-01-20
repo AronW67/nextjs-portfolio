@@ -65,7 +65,7 @@ function ExperienceTimeline() {
                 >
                     <img src="/images/uts-logo.svg" alt="UTS Logo" />
                     <h3 className={styles.verticalTimelineElementTitle}>Graduate Certificate of Information Technology</h3>
-                    <h4 className={styles.verticalTimelineElementSubtitle}>University of Technology, Sydney<br></br><br></br>Achievement: UTS Dean's List 2020 (HD Average)</h4>
+                    <h4 className={styles.verticalTimelineElementSubtitle}>University of Technology, Sydney<br></br><br></br>Achievement: UTS Dean&apos;s List 2020 (HD Average)</h4>
                     <p>
                     Programming (Java), Database (SQL), Project Management, IT Business Theory 
                     </p>
