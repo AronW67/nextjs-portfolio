@@ -1,26 +1,26 @@
-/* Deprecated - Using Netlify functions as nodemailer in Nextjs api folder does not work in production environment */
-
 const nodemailer = require('nodemailer');
 
-export default async (req, res) => {
+exports.handler = (event) => {
 
-    const httpMethod = req.method;
-
-    if (httpMethod !== 'POST') {
-        res.status(400);
-        res.headers({
-            'Allow': 'POST'
-        });
-        res.send('You are not using a http POST method for this endpoint.');
+    if (event.httpMethod !== 'POST') {
+        return {
+            statusCode: 400,
+            body: 'You are not using a http POST method for this endpoint.',
+            headers: {
+                'Allow': 'POST'
+            }
+        }
     }    
 
     let body = {};
 
     try {
-        body = JSON.parse(req.body);
+        body = JSON.parse(event.body);
     } catch (e) {
-        res.status(400);
-        res.send('Malformed JSON in body.');
+        return {
+            statusCode: 400,
+            body: 'Please make sure that payload is of type String.',
+        }
     }
 
     var transporter = nodemailer.createTransport({
@@ -46,6 +46,8 @@ export default async (req, res) => {
         }
     });
 
-    res.status(200);
-    res.send(`Thanks ${body.name}! Email sent successfully!`);
+    return {
+        statusCode: 200,
+        body: `Thanks ${body.name}! Email sent successfully!`
+    }
 }

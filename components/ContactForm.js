@@ -16,7 +16,7 @@ function ContactForm() {
 
         if (name !== '' && email !== '' && message !== '') {
             try {
-                await fetch('/api/email', {
+                await fetch('/.netlify/functions/email', {
                     method: 'POST',
                     body: JSON.stringify({
                         'name': name,
