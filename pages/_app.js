@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 import Head from 'next/head'
-import {Navbar} from '../components/NavBar'
+import {Navbar} from '../components/Navbar'
 import Footer from '../components/Footer'
 import { config } from "@fortawesome/fontawesome-svg-core"
 // You should do that in a Layout file or in `gatsby-browser.js`.
@@ -22,9 +22,9 @@ function MyApp({ Component, pageProps }) {
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
         <title>AW Dev Portfolio</title>
       </Head>
-      <Navbar />
+      <Navbar/>
       <Component {...pageProps} />    
-      <Footer />
+      <Footer/>
     </>
 
   )
